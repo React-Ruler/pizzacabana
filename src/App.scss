@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url("https://fonts.googleapis.com/css2?family=Kreon:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700;800&display=swap");
+
+// Set your brand colors
+$--primary-color-green: #4caf4f;
+$--secondary-color-black: #263238;
+$--info-color-blue: #2194f3;
+
+// Set your neutral colors
+$--neutral-color-white: #ffffff;
+$--neutral-color-silver: #f5f7fa;
+$--neutral-color-dark-grey: #4d4d4d;
+$--neutral-color-grey: #717171;
+$--neutral-color-light-grey: #89939e;
+$--neutral-color-grey-blue: #abbed1;
+
+// Set your color shade
+$--shade-1: #43a046;
+$--shade-2: #388e3b;
+$--shade-3: #237d31;
+$--shade-4: #1b5e1f;
+$--shade-5: #103e13;
+
+// Set your color tint
+$--tint-1: #66bb69;
+$--tint-2: #81c784;
+$--tint-3: #a5d6a7;
+$--tint-4: #c8e6c9;
+$--tint-5: #e8f5e9;
+
+// Set your color action
+$--warning: #fbc02d;
+$--error: #e53835;
+$--success: #2e7d31;
+
+// Update Bulma's global variables
+$family-sans-serif: "Open Sans", sans-serif;
+$family-monospace: "Kreon", sans-serif;
+$primary: $--secondary-color-black;
+$link: $--error;
+$info: $--info-color-blue;
+$success: $--success;
+$warning: $--warning;
+$danger: $--error;
+$dark: $--neutral-color-dark-grey;
+$text: $--neutral-color-dark-grey;
+
+$input-background-color: $--neutral-color-dark-grey;
+$input-radius: 0.125rem;
+$input-color: $--neutral-color-white;
+$input-border-color: $--error;
+$input-icon-color: $--neutral-color-white;
+$input-hover-border-color: $--neutral-color-dark-grey;
+$input-icon-active-color: $--neutral-color-white;
+
+.hero {
+  &.video {
+    position: relative;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgb(0, 0, 0, 0.6);
+    box-shadow: inset 120px 100px 250px #000, -120px -100px 250px #000;
+  }
+}
+
+.btn {
+  border-radius: 0rem !important;
+}
+
+.showcase-content {
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 9rem;
+  z-index: 2;
+  color: #fff;
+}
+
+.showcase-content h1 {
+  font-weight: 700;
+  font-size: 5.2rem;
+  line-height: 1.1;
+  margin: 0 0 2rem;
+  font-family: $family-monospace;
+}
+
+.showcase-content p {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.9rem;
+  line-height: 1.25;
+  margin: 0 0 2rem;
+}
+
+$panel-block-hover-background-color: $--error;
+
+.panel-block {
+  &:hover {
+    color: $--neutral-color-white;
+    border-radius: 0 !important;
+    background-size: auto 100% !important;
+    background-image: url("./assets/nav-active-bg.4ae245653e18d6c7.jpg") !important;
+  }
+}
+
+$tag-radius: 5px;
+
+.footer {
+  background: $--secondary-color-black !important;
+
+  a {
+    color: $--neutral-color-white;
+
+    &:hover {
+      color: $--error;
+    }
+  }
+}
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/elements/_all.sass";
+@import "../node_modules/bulma/sass/form/_all.sass";
+@import "../node_modules/bulma/sass/components/_all.sass";
+@import "../node_modules/bulma/sass/grid/_all.sass";
+@import "../node_modules/bulma/sass/helpers/_all.sass";
+@import "../node_modules/bulma/sass/layout/_all.sass";
